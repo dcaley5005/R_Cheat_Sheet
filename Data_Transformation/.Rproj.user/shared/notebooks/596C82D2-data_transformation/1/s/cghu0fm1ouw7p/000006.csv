@@ -1,0 +1,3 @@
+"0",""
+"0","#When the column names are different you can specify it like this"
+"0","left_join(A,B,by=c(""EmployeeID""=""EmployeeID""))"
