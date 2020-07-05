@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1593989247932.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3389338702",
+    "id" : "50D4B9A6",
+    "lastKnownWriteTime" : 1593989344,
+    "last_content_update" : 1593989345078,
+    "path" : "C:/Data Analytics/R/R-Cheat-Sheet/Data_Transformation/Tidyverse Cheat Sheet.Rmd",
+    "project_path" : "Tidyverse Cheat Sheet.Rmd",
+    "properties" : {
+        "cursorPosition" : "161,0",
+        "last_setup_crc32" : "C3E3A08D3e58d3ce",
+        "scrollLine" : "141"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
