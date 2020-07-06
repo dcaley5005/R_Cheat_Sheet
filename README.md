@@ -5,6 +5,7 @@ This repository houses multiple cheat sheets for R users
 [RStudio PDF Repo](https://rstudio.com/resources/cheatsheets/)
 
 Here are some examples of the cheat sheets R Studio has:
+*You can click the image to download these to PDF*
 
 <div class="col-md-5">
 <a href="https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf"> 
