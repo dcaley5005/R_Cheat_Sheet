@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1594933289821.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "648793823",
+    "id" : "729D3658",
+    "lastKnownWriteTime" : 1594933699,
+    "last_content_update" : 1594933699446,
+    "path" : "~/GitHub/R_Cheat_Sheet/Data_Visualization/data_visualization.Rmd",
+    "project_path" : "data_visualization.Rmd",
+    "properties" : {
+        "cursorPosition" : "90,58",
+        "last_setup_crc32" : "DD0F58F723d65268",
+        "scrollLine" : "79"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

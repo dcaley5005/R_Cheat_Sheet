@@ -1,0 +1,8 @@
+"0",""
+"0","#***************************************************************************"
+"0","### Interactive Data Tables"
+"0","### https://www.udemy.com/course/r-tidyverse-reporting-and-analytics-for-excel-users/learn/lecture/8797450#overview"
+"0",""
+"0","library(DT)"
+"0",""
+"0","mpg %>% datatable()"

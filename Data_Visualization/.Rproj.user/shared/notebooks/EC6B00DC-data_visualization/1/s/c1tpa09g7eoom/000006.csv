@@ -1,0 +1,7 @@
+"0",""
+"0","ggplot(mpg,mapping = aes(x=displ,y=hwy)) +"
+"0","  geom_jitter(mapping=aes(color=class)) +"
+"0","  geom_smooth() +"
+"0","  annotate(""rect"",xmin=1.5,xmax=2,ymin=40,ymax = 45, color=""red"", alpha = 0.3) +"
+"0","  annotate(""text"",x=3,y=43,label=""Let's highlight these \n outliers"") +"
+"0","  ggtitle(""Lets lavel our chart"",""Add your subtitle here"")"

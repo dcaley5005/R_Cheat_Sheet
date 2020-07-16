@@ -1,0 +1,7 @@
+"0",""
+"0",""
+"0","### From the plot above, we can see a straight line does not fit well at all, and the rest of the world is growing much faster "
+"0","### than linearly. What if we added a logarithmic scale to the y-axis?"
+"0",""
+"0","plt_not_china_trend_lin + "
+"0","  scale_y_log10()"
