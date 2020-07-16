@@ -1,4 +1,0 @@
-"0",""
-"0","dt <- read_csv(""rawData/CalculatedColumns_EmployeeData.csv"")"
-"2","Error: 'rawData/CalculatedColumns_EmployeeData.csv' does not exist in current working directory ('C:/Data Analytics/R/R-Cheat-Sheet/Data_Transformation').
-"
