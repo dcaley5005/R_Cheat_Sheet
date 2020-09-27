@@ -1,0 +1,3 @@
+"0",""
+"0","ggplot(mpg) + "
+"0","  geom_col(mapping = aes(x=displ, y=hwy, fill=class))"
