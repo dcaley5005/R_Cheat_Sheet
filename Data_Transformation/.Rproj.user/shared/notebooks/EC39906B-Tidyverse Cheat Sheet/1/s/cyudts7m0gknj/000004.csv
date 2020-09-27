@@ -1,8 +1,0 @@
-"0",""
-"0","dt <- dt %>% mutate("
-"0","  AnnualBaseSalary = ifelse(frequency==""HOURLY"",base*40*52,base*5*52),"
-"0","  AnnualTotalCompensation = ifelse(frequency==""HOURLY"",total*40*52,total*5*52),"
-"0","  AnnualBonus = AnnualTotalCompensation - AnnualBaseSalary"
-"0",") "
-"0",""
-"0","dt %>% top_n(500) %>% datatable(rownames = F)"

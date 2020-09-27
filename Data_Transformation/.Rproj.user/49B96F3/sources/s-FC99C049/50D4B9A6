@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1593989247932.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "50D4B9A6",
+    "lastKnownWriteTime" : 1601227417,
+    "last_content_update" : 1601227417624,
+    "path" : "C:/Data Analytics/R/R-Cheat-Sheet/Data_Transformation/data_transformation.Rmd",
+    "project_path" : "data_transformation.Rmd",
+    "properties" : {
+        "cursorPosition" : "154,27",
+        "last_setup_crc32" : "FC99C0493e58d3ce",
+        "scrollLine" : "146"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

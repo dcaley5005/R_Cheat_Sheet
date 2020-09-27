@@ -1,0 +1,8 @@
+"0",""
+"0","# https://towardsdatascience.com/what-you-need-to-know-about-the-new-dplyr-1-0-0-7eaaaf6d78ac"
+"0",""
+"0","relocate_example <- mtcars %>% "
+"0","                    dplyr::relocate(disp) %>% "
+"0","                    head(3)"
+"0",""
+"0","print(relocate_example)"
