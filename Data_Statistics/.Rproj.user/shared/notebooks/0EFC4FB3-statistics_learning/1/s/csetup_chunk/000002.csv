@@ -1,0 +1,14 @@
+"0",""
+"0","library(tidyverse)"
+"0","library(ggplot2)"
+"0",""
+"0","food_consumption_url <- 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-18/food_consumption.csv'"
+"0","food_consumption <- readr::read_csv(food_consumption_url)"
+"2","Parsed with column specification:
+cols(
+  country = [31mcol_character()[39m,
+  food_category = [31mcol_character()[39m,
+  consumption = [32mcol_double()[39m,
+  co2_emmission = [32mcol_double()[39m
+)
+"

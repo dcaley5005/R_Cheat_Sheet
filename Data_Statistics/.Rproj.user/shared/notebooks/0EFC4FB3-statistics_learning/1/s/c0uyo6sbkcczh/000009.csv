@@ -1,0 +1,6 @@
+"0",""
+"0",""
+"0","ggplot(food_consumption, aes(co2_emmission)) +"
+"0","  geom_histogram() +"
+"0","  facet_wrap(~ food_category)"
+"0",""

@@ -1,0 +1,8 @@
+"0",""
+"0","# Calculate total co2_emission per country: emissions_by_country"
+"0","emmissions_by_country <- food_consumption %>%"
+"0","  group_by(country) %>%"
+"0","  summarize(total_emmission = sum(co2_emmission),"
+"0","            .groups = ""drop"")"
+"0",""
+"0","emmissions_by_country"
