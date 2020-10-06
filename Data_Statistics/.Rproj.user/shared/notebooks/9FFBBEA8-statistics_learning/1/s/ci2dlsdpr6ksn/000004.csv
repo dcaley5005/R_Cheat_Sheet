@@ -1,0 +1,7 @@
+"0",""
+"0","# Create probability distribution"
+"0","size_distribution <- restaurant_groups %>%"
+"0","  count(group_size) %>%"
+"0","  mutate(probability = n / sum(n))"
+"0",""
+"0","size_distribution"

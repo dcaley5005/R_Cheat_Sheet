@@ -1,0 +1,7 @@
+"0",""
+"0","# Calculate variance and sd of co2_emission for each food_category"
+"0","food_consumption %>% "
+"0","  group_by(food_category) %>% "
+"0","  summarize(var_co2 = var(co2_emmission),"
+"0","            sd_co2 = sd(co2_emmission),"
+"0","            .groups = 'drop')"

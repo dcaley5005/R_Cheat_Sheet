@@ -1,0 +1,3 @@
+"0","# Create a histogram of group_size"
+"0","ggplot(restaurant_groups, aes(group_size)) +"
+"0","  geom_histogram(bins = 5)"

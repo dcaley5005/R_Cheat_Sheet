@@ -1,0 +1,4 @@
+"0",""
+"0","# Sample 5 deals with replacement"
+"0","amir_deals %>%"
+"0","  sample_n(5, replace = TRUE)"

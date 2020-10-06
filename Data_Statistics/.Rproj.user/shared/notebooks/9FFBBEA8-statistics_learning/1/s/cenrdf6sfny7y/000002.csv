@@ -1,0 +1,6 @@
+"0",""
+"0","amir_deals <- readRDS(""data/seller_1.rds"")"
+"0",""
+"0","amir_deals %>% "
+"0","  count(product) %>% "
+"0","  mutate(prob = n / sum(n))"

@@ -1,0 +1,7 @@
+"0","# Correlation between life_exp and happiness_score
+cor(world_happiness$happiness_score, world_happiness$life_exp)
+"
+"1","[1]"
+"1"," 0.7737615"
+"1","
+"

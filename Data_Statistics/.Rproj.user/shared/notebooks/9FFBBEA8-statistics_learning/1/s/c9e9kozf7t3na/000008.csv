@@ -1,0 +1,4 @@
+"0",""
+"0","# Scatterplot of gdp_per_cap and life_exp"
+"0","ggplot(world_happiness, aes(gdp_per_cap, life_exp)) +"
+"0","  geom_point()"
