@@ -1,0 +1,254 @@
+---
+title: "Tidyverse Cheat Sheet"
+author: "Daniel Caley"
+date: "4/23/2020"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+
+library(tidyverse)
+library(DT)
+
+
+
+```
+
+ 
+
+
+Read Files and Mutate
+
+```{r, message=FALSE, warning=FALSE}
+
+dt <- read_csv("rawData/CalculatedColumns_EmployeeData.csv")
+
+unique(dt$frequency)  ### This is just like distinct
+
+glimpse(dt) ### see a preview of the data
+
+
+
+```
+
+
+
+
+```{r, message=FALSE, warning=FALSE}
+
+dt <- dt %>% mutate(
+  AnnualBaseSalary = ifelse(frequency=="HOURLY",base*40*52,base*5*52),
+  AnnualTotalCompensation = ifelse(frequency=="HOURLY",total*40*52,total*5*52),
+  AnnualBonus = AnnualTotalCompensation - AnnualBaseSalary
+) 
+
+dt %>% top_n(500) %>% datatable(rownames = F)
+
+```
+
+ 
+
+
+Filtering
+https://www.udemy.com/course/r-tidyverse-reporting-and-analytics-for-excel-users/learn/lecture/8602902#overview
+
+```{r, message=FALSE, warning=FALSE}
+
+
+dt <- read_csv("rawData/EmployeeDataProcessed.csv")
+
+dt <- dt %>% filter(year==2017 & county %in% c("CASCADE","POWELL") | AnnualBase >= 20000)
+
+dt <- dt %>% filter(year %in% 2014:2017 & !county %in% c("CASCADE","POWELL"))
+
+2014:2017
+
+2014.1 %in% 2014:2017
+
+2014.1 >= 2014 & 2014.1 <= 2017
+
+
+
+```
+
+ 
+
+
+PivotingData
+https://www.udemy.com/course/r-tidyverse-reporting-and-analytics-for-excel-users/learn/lecture/8844112#overview
+
+```{r, message=FALSE, warning=FALSE}
+
+
+dt <- read_csv("rawData/EmployeeDataProcessed.csv")
+
+
+glimpse(dt)
+
+dt1 <- dt %>% group_by(county) %>% 
+  count() %>% 
+  arrange(desc(n))
+
+
+dt2 <- dt %>% 
+  filter(county == "LEWIS AND CLARK") %>% 
+  group_by(department) %>% 
+  summarise(
+    AvgBase = mean(AnnualBase),
+    MedianBase = median(AnnualBase),
+    TotalBase = sum(AnnualBase)
+  ) 
+
+
+dt3 <- dt %>% 
+  filter(county == "LEWIS AND CLARK") %>% 
+  group_by(department) %>% 
+  summarise_if(is.numeric,mean) 
+
+
+
+dt4 <- dt %>% 
+  filter(county == "LEWIS AND CLARK") %>% 
+  group_by(department,year) %>% 
+  summarise(TotalBase = sum(AnnualBase)) %>% 
+  spread(year,TotalBase) #### Transpose data
+
+summary_test <- dt %>% 
+  filter(county == "LEWIS AND CLARK") %>% 
+  group_by(department,year) %>% 
+  summarise(TotalBase = sum(AnnualBase))
+
+
+```
+
+https://projects.datacamp.com/projects/870
+Filtering real data and dealing with cumulative sums
+
+```{r, message=FALSE, warning=FALSE}
+
+covid <- read_csv("https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv")
+
+covid <- covid  %>% 
+  group_by(date, country, type) %>% 
+  summarize(cases = sum(cases)) %>% 
+  ungroup() %>% 
+  mutate(is_china = if_else(country == "China","China","Not China"))
+
+confirmed_cases_china_vs_world <- covid %>% 
+  filter(date <= '2020-03-15' & type == "confirmed") %>% 
+  group_by(is_china, date) %>% 
+  summarise(cases = sum(cases)) %>% 
+  mutate(cum_cases = cumsum(cases))
+
+glimpse(confirmed_cases_china_vs_world)
+
+
+```
+ 
+```{r, message=FALSE, warning=FALSE}
+
+# https://towardsdatascience.com/what-you-need-to-know-about-the-new-dplyr-1-0-0-7eaaaf6d78ac
+
+### Moves the column to the far left
+relocate_example <- mtcars %>% 
+                    dplyr::relocate(disp) %>% 
+                    head(3)
+
+print(relocate_example)
+
+# moves after a column
+relocate_example2 <- mtcars %>% 
+                      relocate(starts_with("c"), .after = disp)  %>% 
+                      head(3)
+
+print(relocate_example2)
+
+
+
+```
+
+
+
+Merging Data
+https://www.udemy.com/course/r-tidyverse-reporting-and-analytics-for-excel-users/learn/lecture/9318758#overview
+
+
+```{r, message=FALSE, warning=FALSE}
+
+
+A <- read_csv("rawData/Employees.csv")
+B <- read_csv("rawData/EmployeeData.csv")
+
+#Automatically Joins on all fields with the same name
+left_join(A,B)
+
+
+#Looks for the column EmployeeID to join on both tables
+left_join(A,B,by="EmployeeID")
+
+#When the column names are different you can specify it like this
+left_join(A,B,by=c("EmployeeID"="EmployeeID"))
+
+right_join(A,B)
+anti_join(A,B)
+full_join(A,B)
+inner_join(A,B)
+semi_join(A,B)
+
+DepartmentHistory <- read_csv("rawData/DepartmentHistory.csv")
+
+#Department history includes multiple records for a single employee
+left_join(A,DepartmentHistory)
+
+
+#Extract the latest department only
+latestDepartment <- DepartmentHistory %>% 
+  arrange(desc(Year)) %>% 
+  distinct(EmployeeID,.keep_all = T)
+
+
+left_join(A,latestDepartment)
+
+unioning_data <- union_all(A, A)
+
+```
+
+ 
+
+
+Getting Data From R to Excell
+https://www.udemy.com/course/r-tidyverse-reporting-and-analytics-for-excel-users/learn/lecture/8820024#overview
+
+```{r, message=FALSE, warning=FALSE}
+
+dt <- read_csv("rawData/EmployeeDataProcessed.csv")
+
+dt %>% 
+  filter(county == "LEWIS AND CLARK") %>%
+  group_by(department,county,city) %>% 
+  summarise_if(is.numeric,sum) %>% 
+  write_csv("EmployeeSummarised.csv")
+
+```
+
+ 
+
+
+For Loops with if filter
+
+```{r, message=FALSE, warning=FALSE}
+this_is_a_list <- c(1,2,3,4,5)
+
+for (l in this_is_a_list) {
+  print(l)
+  
+}
+
+for (l in this_is_a_list) {
+  z <- if_else(l %% 2 == 0, "even","odd")
+  print(paste0(as.character(l)," ",z))
+}
+
+
+```
+
