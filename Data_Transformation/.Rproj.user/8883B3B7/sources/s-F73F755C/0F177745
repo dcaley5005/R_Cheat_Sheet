@@ -3,7 +3,7 @@
     "path": "~/GitHub/R_Cheat_Sheet/Data_Transformation/data_transformation.Rmd",
     "project_path": "data_transformation.Rmd",
     "type": "r_markdown",
-    "hash": "3911248383",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1602719750027.0,
@@ -12,15 +12,16 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "93,42",
-        "scrollLine": "0"
+        "cursorPosition": "11,0",
+        "scrollLine": "0",
+        "last_setup_crc32": "F73F755C4e35b1f7"
     },
     "folds": "",
-    "lastKnownWriteTime": 1601904379,
+    "lastKnownWriteTime": 1603487188,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1601904379,
+    "last_content_update": 1603487188631,
     "read_only": false,
     "read_only_alternatives": []
 }

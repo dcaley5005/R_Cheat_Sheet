@@ -1,0 +1,7 @@
+"0",""
+"0",""
+"0","A <- read_csv(""rawData/Employees.csv"")"
+"0","B <- read_csv(""rawData/EmployeeData.csv"")"
+"0",""
+"0","#Automatically Joins on all fields with the same name"
+"0","left_join(A,B)"

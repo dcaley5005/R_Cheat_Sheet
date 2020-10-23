@@ -1,0 +1,7 @@
+"0",""
+"0","warpbreaks %>%"
+"0","  pivot_wider("
+"0","    names_from = wool,"
+"0","    values_from = breaks,"
+"0","    values_fn = mean"
+"0","  ) %>% datatable(rownames = F)"
