@@ -1,0 +1,5 @@
+"0",""
+"0","DepartmentHistory <- read_csv(""rawData/DepartmentHistory.csv"")"
+"0",""
+"0","#Department history includes multiple records for a single employee"
+"0","left_join(A,DepartmentHistory)"

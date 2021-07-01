@@ -1,0 +1,16 @@
+"0",""
+"0","unloadNamespace(""tsibble"")"
+"0","library(slider)"
+"0","library(tsibble)"
+"2","
+Attaching package: ‘tsibble’
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, union
+
+"
+"0","### Note if you have tsibble library on it will conflict with slider"
+"0",""
+"0","covid_wide %>% head(5000) %>% datatable(rownames = F)"

@@ -1,0 +1,5 @@
+"0",""
+"0",""
+"0","# Performing aggregations"
+"0","warpbreaks <- as_tibble(warpbreaks[c(""wool"", ""tension"", ""breaks"")])"
+"0","warpbreaks %>% datatable(rownames = F)"

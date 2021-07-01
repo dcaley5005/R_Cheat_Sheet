@@ -1,0 +1,7 @@
+"0",""
+"0","# moves after a column"
+"0","relocate_example2 <- mtcars %>% "
+"0","                      relocate(starts_with(""c""), .after = disp)  %>% "
+"0","                      head(3)"
+"0",""
+"0","print(relocate_example2)"

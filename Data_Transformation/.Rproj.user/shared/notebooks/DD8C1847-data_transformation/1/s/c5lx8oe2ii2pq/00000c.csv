@@ -1,0 +1,7 @@
+"0",""
+"0","who %>% pivot_longer("
+"0","            cols = new_sp_m014:newrel_f65,"
+"0","            names_to = c(""diagnosis"", ""gender"", ""age""),"
+"0","            names_pattern = ""new_?(.*)_(.)(.*)"","
+"0","            values_to = ""count"""
+"0","                      ) %>% head(500) %>% datatable(rownames = F)"

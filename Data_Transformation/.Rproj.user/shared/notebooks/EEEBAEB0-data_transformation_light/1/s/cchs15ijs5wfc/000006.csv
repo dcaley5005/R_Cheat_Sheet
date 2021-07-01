@@ -1,0 +1,4 @@
+"0",""
+"0","# Multiple Dimension Pivot Wider"
+"0","us_rent_income %>%"
+"0","  pivot_wider(names_from = variable, names_sep = ""_"", values_from = c(estimate, moe)) %>% head() %>%  datatable(rownames = F)"

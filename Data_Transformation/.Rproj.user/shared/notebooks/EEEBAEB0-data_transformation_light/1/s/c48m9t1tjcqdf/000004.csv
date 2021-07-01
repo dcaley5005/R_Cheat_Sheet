@@ -1,0 +1,6 @@
+"0",""
+"0","### Multiple Metrics by rolling 7 Days"
+"0","covid_wide %>% group_by(country, is_china) %>% "
+"0","                  mutate(across(c(confirmed, death, recovered), list(rolling = ~ slider::slide_dbl(., sum, .before = 6)))) %>% "
+"0","                  mutate(across(contains(""rolling""), list(growth = ~ . / lag(., 6) -1))) %>% "
+"0","                  head(5000) %>% datatable(rownames = F)"
