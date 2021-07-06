@@ -1,3 +1,0 @@
-"0",""
-"0","hchart(mpg, ""scatter"","
-"0","       hcaes(x=displ, y = hwy, group = class))"

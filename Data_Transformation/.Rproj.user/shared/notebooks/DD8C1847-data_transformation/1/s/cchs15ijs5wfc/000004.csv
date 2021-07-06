@@ -1,4 +1,0 @@
-"0",""
-"0","# Pivot Wider Data Set"
-"0","us_rent_income %>% "
-"0","  select(-moe) %>% pivot_wider(names_from = variable, values_from = estimate) %>% head() %>% datatable(rownames = F)"

@@ -1,3 +1,0 @@
-"0",""
-"0","relig_income %>%"
-"0","  pivot_longer(!religion, names_to = ""income"", values_to = ""count"") "

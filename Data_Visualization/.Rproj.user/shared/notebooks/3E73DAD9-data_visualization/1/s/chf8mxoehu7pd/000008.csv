@@ -1,5 +1,0 @@
-"0",""
-"0","g <- ggplot(mpg) + "
-"0","  geom_point(aes(x=displ,y=hwy,color=class))"
-"0",""
-"0","ggplotly(g)"

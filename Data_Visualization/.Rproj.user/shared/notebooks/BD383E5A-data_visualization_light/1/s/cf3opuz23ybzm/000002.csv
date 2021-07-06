@@ -1,0 +1,8 @@
+"0",""
+"0","df_census_data <- read_csv(""census_bureau.csv"")"
+"0",""
+"0","census_data <- df_census_data %>% filter(census_current_flag == TRUE & "
+"0","                                          state_abb != ""AK"","
+"0","                                          state_abb != ""HI"","
+"0","                                          state_abb != ""DC"") %>% "
+"0","                                mutate(state_name = tolower(state_name))"

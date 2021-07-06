@@ -1,0 +1,5 @@
+"0","sql
+"
+"1","select customer_id, order_id, sales_price from orders where date_order between 2020-02-01 and 2020-02-08"
+"1","
+"

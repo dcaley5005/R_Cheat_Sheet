@@ -1,3 +1,0 @@
-"0",""
-"0","# Original Data set"
-"0","us_rent_income %>% head() %>%  datatable(rownames = F)"

@@ -1,3 +1,0 @@
-"0",""
-"0","ggplot(mpg) + "
-"0","  geom_smooth(mapping = aes(x=displ, y = hwy),method = 'lm')"

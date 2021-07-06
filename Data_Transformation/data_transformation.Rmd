@@ -300,7 +300,7 @@ relocate_example <- mtcars %>%
 
 print(relocate_example)
 
-# moves after a column
+# moves after a id_lumn
 relocate_example2 <- mtcars %>% 
                       relocate(starts_with("c"), .after = disp)  %>% 
                       head(3)

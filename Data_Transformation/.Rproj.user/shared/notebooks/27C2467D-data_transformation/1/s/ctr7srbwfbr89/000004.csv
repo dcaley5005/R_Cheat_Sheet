@@ -1,4 +1,0 @@
-"0",""
-"0",""
-"0","#Looks for the column EmployeeID to join on both tables"
-"0","left_join(A,B,by=""EmployeeID"")"

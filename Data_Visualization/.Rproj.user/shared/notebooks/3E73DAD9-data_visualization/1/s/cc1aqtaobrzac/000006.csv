@@ -1,5 +1,0 @@
-"0",""
-"0","ggplot(mpg) + "
-"0","  geom_col(mapping = aes(x=displ, y=hwy, fill=class)) +"
-"0","  theme(legend.position = ""none"") +"
-"0","  theme(axis.text.x = element_text(angle = 45, hjust = 1))"

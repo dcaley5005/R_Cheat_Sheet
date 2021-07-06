@@ -1,0 +1,24 @@
+"0",""
+"0","covid <- read_csv(""https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv"")"
+"2","
+[36m──[39m [1m[1mColumn specification[1m[22m [36m────────────────────────────────────────────────────────────────────────────────────────────────────────────────[39m
+cols(
+  date = [34mcol_date(format = """")[39m,
+  province = [31mcol_character()[39m,
+  country = [31mcol_character()[39m,
+  lat = [32mcol_double()[39m,
+  long = [32mcol_double()[39m,
+  type = [31mcol_character()[39m,
+  cases = [32mcol_double()[39m
+)
+
+"
+"0","covid <- covid  %>% "
+"0","  group_by(date, country, type) %>% "
+"0","  summarize(cases = sum(cases)) %>% "
+"0","  ungroup() %>% "
+"0","  mutate(is_china = if_else(country == ""China"",""China"",""Not China""))"
+"2","`summarise()` has grouped output by 'date', 'country'. You can override using the `.groups` argument.
+"
+"0","covid_wide <- covid %>% pivot_wider(names_from = type, values_from = cases) %>% filter(date >= ""2020-04-01"")"
+"0",""

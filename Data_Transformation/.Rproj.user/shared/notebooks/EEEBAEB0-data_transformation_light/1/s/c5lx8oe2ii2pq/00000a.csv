@@ -1,4 +1,0 @@
-"0",""
-"0",""
-"0","# Multiple variables stored in column names"
-"0","who %>% head() %>% datatable(rownames = F)"

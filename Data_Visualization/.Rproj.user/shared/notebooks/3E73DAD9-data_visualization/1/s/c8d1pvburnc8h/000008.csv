@@ -1,5 +1,0 @@
-"0",""
-"0",""
-"0","ggplot(confirmed_cases_china_vs_world) +"
-"0","  geom_line(aes(x = date, y = cum_cases, group = is_china, color = is_china)) +"
-"0","  ylab(""Cumulative Confirmed Cases"")"
