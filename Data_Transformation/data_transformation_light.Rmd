@@ -124,7 +124,7 @@ library(tsibble)
 ### Multiple Metrics by rolling 7 Days
 covid_wide %>% group_by(country, is_china) %>% 
                   mutate(
-                    across(c(confirmed, death, recovered), 
+                    across(c(confirmed, death), 
                            list(rolling = ~ slider::slide_dbl(., sum, .before = 6))
                            )
                     ) %>% 
@@ -135,7 +135,7 @@ covid_wide %>% group_by(country, is_china) %>%
 
 covid_wide %>% group_by(is_china) %>% 
                   mutate(
-                    across(c(confirmed, death, recovered), 
+                    across(c(confirmed, death), 
                           list(rolling = ~ slider::slide_dbl(., sum, .before = 6, .complete = TRUE))),
                     across(contains("rolling"), list(growth = ~ . / lag(., 6) -1))
                   ) %>% head(5000) %>% datatable(rownames = F)
@@ -157,8 +157,7 @@ covid_wide_missing_dates %>% arrange(country, is_china) %>%
 covid_wide_missing_dates %>% as_tsibble(key = c(country, is_china), 
                                         index = date) %>% 
                              fill_gaps(confirmed = 0,
-                                       death = 0,
-                                       recovered = 0) %>% 
+                                       death = 0) %>% 
                              group_by_key() %>% 
                              tidyr::fill(earth_population, 
                                          .direction = "down") %>% 

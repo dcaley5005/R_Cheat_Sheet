@@ -1,5 +1,5 @@
-"0","gsub(""Dan"",""Daniel"",random_string)
-"
+"0",""
+"0","gsub(""Dan"",""Daniel"",random_string)"
 "1","[1]"
 "1"," ""Daniel is awesome!"""
 "1","

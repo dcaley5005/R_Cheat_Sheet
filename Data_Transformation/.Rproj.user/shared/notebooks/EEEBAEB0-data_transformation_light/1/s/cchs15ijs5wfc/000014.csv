@@ -1,8 +1,0 @@
-"0",""
-"0","# Placing the seperator any where"
-"0","us_rent_income %>%"
-"0","  pivot_wider("
-"0","    names_from = variable,"
-"0","    names_glue = ""{variable}_{.value}"","
-"0","    values_from = c(estimate, moe)"
-"0","  ) %>% head() %>% datatable(rownames = F)"

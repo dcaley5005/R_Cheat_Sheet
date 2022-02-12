@@ -1,5 +1,11 @@
-"0","sql
-"
+"0",""
+"0","library(stringr)"
+"0",""
+"0","bgn_date <- ""2020-02-01"""
+"0","end_date <- ""2020-02-08"""
+"0",""
+"0","sql <- str_glue(""select customer_id, order_id, sales_price from orders where date_order between {bgn_date} and {end_date}"")"
+"0","sql"
 "1","select customer_id, order_id, sales_price from orders where date_order between 2020-02-01 and 2020-02-08"
 "1","
 "
